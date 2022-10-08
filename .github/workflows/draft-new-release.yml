@@ -23,6 +23,8 @@ jobs:
       - name: Create pull request
         uses: peter-evans/create-pull-request@v4.1.3
         with:
+          commit-message: Prepare release/${{ github.event.inputs.version }}
+          committer: GitHub <noreply@github.com>
           base: main
           branch: release/${{ github.event.inputs.version }}
           title: Release version ${{ github.event.inputs.version }}
