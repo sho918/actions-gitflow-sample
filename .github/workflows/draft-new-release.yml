@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.1.0
+        with:
+          ref: develop
 
       - name: Bump version in package.json
         working-directory: packages/web
